@@ -1,5 +1,8 @@
 import Layout from '../components/MyLayout';
 import Link from 'next/link';
+import Video from '../components/Video';
+import DropDown from '../components/DropDown';
+import Images from '../components/Images';
 
 function getPosts() {
   return [
@@ -37,6 +40,15 @@ export default function Blog() {
   return (
     <Layout>
       <h1>PopSeed</h1>
+      <DropDown />
+      <Video />
+      <Images images={[
+        { name: 'lokanta' },
+        { name: 'puerto1' },
+        { name: 'Fumi2'},
+        { name: 'edge2'},
+        { name: 'cracked&battered'}
+      ]}/>
       <ul>
         {getPosts().map(post => (
           <PostLink key={post.id} post={post} />

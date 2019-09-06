@@ -3,7 +3,7 @@ import Image from './Image';
 export default ({ images }) => {
   return (
     <div>
-      {images.map(image => <Image name={image.name} key={image.name} />)}
+      {images.map(image => <Image key={image.id} post={image} />)}
     </div>
   );
 }

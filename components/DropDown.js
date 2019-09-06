@@ -2,7 +2,7 @@ import Link from 'next/link';
 const DropDown = () => (
   <div className="navbar">
     <Link href="/">
-      <a >Home</a>
+      <a >PopSeed</a>
     </Link>
     <Link href="/about">
       <a >About</a>
@@ -12,9 +12,9 @@ const DropDown = () => (
         <i className="fa fa-caret-down"></i>
       </button>
       <div className="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+        <a href="p/lokanta">Find Space</a>
+        <a href="/signup">Sign up</a>
+        <a href="/login">Log In</a>
       </div>
 
     </div>

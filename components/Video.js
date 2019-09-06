@@ -1,7 +1,7 @@
 import SearchForm from './Form.js';
 const Video = () => (
   <div className="section">
-    <h1>Rent space for your idea. Host a pop up.</h1>
+    <h1>Rent space for your pop up restaurant or Host a pop up.</h1>
     <div className="form-input">
       <SearchForm/>
     </div>
@@ -32,6 +32,7 @@ const Video = () => (
         text-align: center;
         font-size:3rem;
         font-family:"Cookie";
+        color: white;
         padding:20px;
         margin:15px;
         z-index:1;

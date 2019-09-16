@@ -12,7 +12,7 @@ const DropDown = () => (
         <i className="fa fa-caret-down"></i>
       </button>
       <div className="dropdown-content">
-        <a href="p/lokanta">Find Space</a>
+        <a href="/searchPage">Find a Space</a>
         <a href="/signup">Sign up</a>
         <a href="/login">Log In</a>
       </div>

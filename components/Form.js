@@ -1,7 +1,18 @@
-const SearchForm = () => (
+import Link from 'next/link';
+function myFunction() {
+  if (process.browser) {
+    return document.getElementById("search").value;
+  } else {
+    return ""
+  }
+}
+const SearchForm = () => {
+  return(
     <div className="container-1">
-      <span className="icon"><i className="fa fa-search"></i></span>
-      <input type="search" id="search" placeholder="City" />
+      <input type="search" id="search" placeholder="City..." />
+      <Link href="/searchPage">
+        <a><button type="submit"><i className="fa fa-search"></i></button></a>
+      </Link>
       <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
       <style jsx>{`
 
@@ -12,6 +23,20 @@ const SearchForm = () => (
           position: relative;
           opacity: 0.8;
         }
+        .container-1 button {
+          width: 20%;
+          padding: 14px;
+          background: white;
+          color: red;
+          font-size: 17px;
+          border: 1px solid grey;
+          border-left: none; /* Prevent double borders */
+          cursor: pointer;
+        }
+        .container-1 button:hover {
+          background: #FF6347;
+        }
+
 
         .container-1 input#search{
           width: 300px;
@@ -33,7 +58,7 @@ const SearchForm = () => (
           transition: background .55s ease;
         }
         .container-1 input#search::-webkit-input-placeholder {
-            color: #65737e;
+            color: white;
         }
 
         .container-1 .icon{
@@ -51,6 +76,9 @@ const SearchForm = () => (
         }
       `}</style>
     </div>
-)
-
+  );
+}
+function searchFunc() {
+  document.getElementsByName("button").innerHTML = "you cliked me";
+}
 export default SearchForm;

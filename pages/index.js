@@ -5,12 +5,12 @@ import Images from '../components/Images';
 
 function getPosts() {
   return [
-    { id: 'lokanta', title: 'lokanta', location: 'Walnut Creek' },
-    { id: 'puerto', title: 'puerto1', location: 'San Francisco'},
-    { id: 'fumi', title: 'Fumi2', location: 'Oakland'},
-    { id: 'edge', title: 'edge2', location: 'Berkeley'},
-    { id: 'cracked&battered', title: 'cracked&battered', location: 'San Francisco'},
-    { id: 'gakara', title: 'gakara', location: 'San Francisco'}
+    { id: 'Lokanta', price: '$500/day', location: 'Walnut Creek' },
+    { id: 'Puerto', price: '$899/day', location: 'San Francisco'},
+    { id: 'Fumi', price: '$695/day', location: 'Oakland'},
+    { id: 'Edge', price: '$429/day', location: 'Berkeley'},
+    { id: 'Cracked&battered', price: '$1200/day', location: 'San Francisco'},
+    { id: 'Gakara', price: '$989/day', location: 'San Francisco'}
   ];
 }
 
@@ -38,7 +38,7 @@ function getPosts() {
 //   </li>
 // );
 
-export default function Blog() {
+const Blog = () => {
   return (
     <Layout>
       <DropDown />
@@ -67,3 +67,4 @@ export default function Blog() {
     </Layout>
   );
 }
+export {Blog as default, getPosts};

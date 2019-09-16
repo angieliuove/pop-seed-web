@@ -6,7 +6,7 @@ const Video = () => (
       <SearchForm/>
     </div>
     <div className="video-container">
-      <video muted="muted" loop="loop" autoPlay="autoplay" playsInline="true" poster="https://d253b1eioa5z7b.cloudfront.net/homepage/homepage-poster-2.png" src="https://d253b1eioa5z7b.cloudfront.net/homepage/homepage-video-2.mp4"></video>
+      <video muted="muted" loop="loop" autoPlay="autoplay" playsInline={true} poster="https://d253b1eioa5z7b.cloudfront.net/homepage/homepage-poster-2.png" src="https://d253b1eioa5z7b.cloudfront.net/homepage/homepage-video-2.mp4"></video>
     </div>
     <style jsx>{`
       * {
@@ -33,8 +33,8 @@ const Video = () => (
         font-size:3rem;
         font-family:"Cookie";
         color: white;
-        padding:20px;
-        margin:15px;
+        padding:30px;
+        margin:30px;
         z-index:1;
       }
 

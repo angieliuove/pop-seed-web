@@ -1,13 +1,13 @@
 import { useRouter } from 'next/router';
 import Markdown from 'react-markdown';
-import Layout from '../../components/MyLayout';
-import Popup from '../../components/Popup';
+import Layout from '../../../components/MyLayout';
+import Popup from '../../../components/Popup';
 export default () => {
   const router = useRouter();
   return (
     <Layout>
       <img src={`/static/images/${router.query.id}.jpg`} alt={router.query.id} width="750" height="550" align="middle"/>
-      <h1>Locust St, Walnut Creek - {router.query.id}</h1>
+      <h1>Locust St, {router.query.location} - {router.query.id}  {router.query.price}</h1>
       <div className="markdown">
         <Markdown
           source={`

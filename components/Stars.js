@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 const Stars = ({ post }) => {
-  var star = "";
+  var star = <a></a>;
   if (post == "Lokanta") {
     star =
     <a>
@@ -19,7 +19,7 @@ const Stars = ({ post }) => {
       <span className="fa fa-star checked" style={{color: "orange"}}></span>
       <span className="fa fa-star checked" style={{color: "orange"}}></span>
       <span className="fa fa-star checked" style={{color: "orange"}}></span>
-      <span className="fa fa-star"> 5.0</span>
+      <span className="fa fa-star"> 4.0</span>
     </a>
   }
   return (

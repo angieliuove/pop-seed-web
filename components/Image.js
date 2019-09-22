@@ -1,6 +1,6 @@
 import Link from 'next/link';
 export default ({ post }) => {
-  var star = "";
+  var star = <a></a>;
   if (post.id == "Lokanta") {
     star =
     <a>

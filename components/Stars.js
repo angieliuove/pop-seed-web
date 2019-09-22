@@ -1,21 +1,37 @@
 import Link from 'next/link';
 
-const Stars = () => (
+const Stars = ({ post }) => {
+  var star = "";
+  if (post == "Lokanta") {
+    star =
+    <a>
+      <span className="fa fa-star checked" style={{color: "orange"}}></span>
+      <span className="fa fa-star checked" style={{color: "orange"}}></span>
+      <span className="fa fa-star checked" style={{color: "orange"}}></span>
+      <span className="fa fa-star checked" style={{color: "orange"}}></span>
+      <span className="fa fa-star checked" style={{color: "orange"}}></span>
+      <span className="rating"> 5.0</span>
+    </a>
+  } else if (post == "Fumi") {
+    star =
+    <a>
+      <span className="fa fa-star checked" style={{color: "orange"}}></span>
+      <span className="fa fa-star checked" style={{color: "orange"}}></span>
+      <span className="fa fa-star checked" style={{color: "orange"}}></span>
+      <span className="fa fa-star checked" style={{color: "orange"}}></span>
+      <span className="fa fa-star"> 5.0</span>
+    </a>
+  }
+  return (
   <div className="stars">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-      <a>
-        <span className="fa fa-star checked"></span>
-        <span className="fa fa-star checked"></span>
-        <span className="fa fa-star checked"></span>
-        <span className="fa fa-star checked"></span>
-        <span className="fa fa-star"> 4.0 average based on 15 reviews</span>
-      </a>
+      {star}
     <style jsx>{`
       .checked {
         color: orange;
       }
     `}</style>
   </div>
-);
+)};
 
 export default Stars;

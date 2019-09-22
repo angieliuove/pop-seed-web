@@ -5,7 +5,7 @@ import Images from '../components/Images';
 
 function getPosts() {
   return [
-    { id: 'Lokanta', price: '$500/day', location: 'Walnut Creek' },
+    { id: 'Lokanta', price: '$500/day', location: 'Walnut Creek'},
     { id: 'Puerto', price: '$899/day', location: 'San Francisco'},
     { id: 'Fumi', price: '$695/day', location: 'Oakland'},
     { id: 'Edge', price: '$429/day', location: 'Berkeley'},

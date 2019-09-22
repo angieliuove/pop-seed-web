@@ -1,5 +1,27 @@
 import Link from 'next/link';
-export default ({ post }) => (
+export default ({ post }) => {
+  var star = "";
+  if (post.id == "Lokanta") {
+    star =
+    <a>
+      <span className="fa fa-star checked" style={{color: "orange"}}></span>
+      <span className="fa fa-star checked" style={{color: "orange"}}></span>
+      <span className="fa fa-star checked" style={{color: "orange"}}></span>
+      <span className="fa fa-star checked" style={{color: "orange"}}></span>
+      <span className="fa fa-star checked" style={{color: "orange"}}> 5.0</span>
+    </a>
+
+  } else if (post.id === "Fumi") {
+    star =
+    <a>
+      <span className="fa fa-star checked" style={{color: "orange"}}></span>
+      <span className="fa fa-star checked" style={{color: "orange"}}></span>
+      <span className="fa fa-star checked" style={{color: "orange"}}></span>
+      <span className="fa fa-star checked" style={{color: "orange"}}></span>
+      <span className="fa fa-star"> 4.0 </span>
+    </a>
+  }
+  return (
   <div className="column">
     <div className="Image">
       <Link href="/p/[id]/[location]" as={`/p/${post.id}/${post.location}`}>
@@ -7,14 +29,8 @@ export default ({ post }) => (
       </Link>
       <p>{post.id} Restaurant - {post.location}</p>
       <p>{post.price}</p>
-      <Link href="/review">
-        <a>
-          <span className="fa fa-star checked"></span>
-          <span className="fa fa-star checked"></span>
-          <span className="fa fa-star checked"></span>
-          <span className="fa fa-star checked"></span>
-          <span className="fa fa-star"> 4.0</span>
-        </a>
+      <Link href="/review/[id]" as={`/review/${post.id}`}>
+      {star}
       </Link>
 
     </div>
@@ -46,4 +62,4 @@ export default ({ post }) => (
       }
     `}</style>
   </div>
-);
+)};
